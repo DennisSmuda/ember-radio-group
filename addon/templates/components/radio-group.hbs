@@ -1,0 +1,11 @@
+<div role="radiogroup" class="">
+  {{#each options as |option|}}
+    <div role="radio" tabindex="0">
+      {{option.value}}
+    </div>
+  {{/each}}
+</div>
+
+{{yield}}
+
+{{log options}}
