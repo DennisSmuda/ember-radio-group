@@ -31,13 +31,13 @@ export default Component.extend({
   },
 
   keyDown(e) {
-    if (e.keyCode === KEYCODES.UP || e.keyCode === KEYCODES.DOWN) {
+    if (e.keyCode === KEYCODES.UP || e.keyCode === KEYCODES.DOWN) {
       e.preventDefault();
     }
   },
 
   keyUp(e) {
-    if (e.keyCode === KEYCODES.UP || e.keyCode === KEYCODES.LEFT) {
+    if (e.keyCode === KEYCODES.UP || e.keyCode === KEYCODES.LEFT) {
 
       // Check previous option on Up|Left
       if (this.checkedValueIndex <= 0) {
@@ -49,7 +49,7 @@ export default Component.extend({
         this.set('checkedValueIndex', this.checkedValueIndex - 1);
       }
 
-    } else if (e.keyCode === KEYCODES.DOWN || e.keyCode === KEYCODES.RIGHT) {
+    } else if (e.keyCode === KEYCODES.DOWN || e.keyCode === KEYCODES.RIGHT) {
       // Check next option on Down|Right
       if (this.checkedValueIndex >= this.groupOptions.length - 1) {
         // Wrap to start
@@ -72,7 +72,7 @@ export default Component.extend({
   click(e) {
     const target = e.target;
 
-    if (target.className === "radiogroup__label") { return; }
+    if (target.className === "radiogroup__label") return;
 
     this.set('checkedValue', target.getAttribute('data-value'));
     this.set('checkedValueIndex', target.getAttribute('data-value-index'));
