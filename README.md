@@ -1,7 +1,8 @@
-radio-group
-==============================================================================
+# Ember-Radio-Group Addon
 
-[Short description of the addon.]
+[![Build Status](https://travis-ci.org/dennissmuda/ember-radio-group.svg?branch=master)](https://travis-ci.org/rajasegar/ember-aria-checkbox)
+
+An Ember Radiogroup addon widget based on the WAI-ARIA authoring practices.
 
 Installation
 ------------------------------------------------------------------------------
