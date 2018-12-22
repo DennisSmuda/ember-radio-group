@@ -30,7 +30,15 @@ export default Component.extend({
     })
   },
 
-  keyUp(e) { if (e.keyCode === KEYCODES.UP || e.keyCode === KEYCODES.LEFT) {
+  keyDown(e) {
+    if (e.keyCode === KEYCODES.UP || e.keyCode === KEYCODES.DOWN) {
+      e.preventDefault();
+    }
+  },
+
+  keyUp(e) {
+    if (e.keyCode === KEYCODES.UP || e.keyCode === KEYCODES.LEFT) {
+
       // Check previous option on Up|Left
       if (this.checkedValueIndex <= 0) {
         // Wrap to start
@@ -51,12 +59,14 @@ export default Component.extend({
         this.set('checkedValue', this.groupOptions[this.checkedValueIndex + 1].value);
         this.set('checkedValueIndex', this.checkedValueIndex + 1);
       }
+
     }
 
     // Focus new Element
     const newElement = document.querySelector('[role="radio"][data-value-index="' + this.checkedValueIndex + '"]');
     newElement.focus();
     this.changed(this.groupOptions[this.checkedValueIndex].value);
+    e.preventDefault();
   },
 
   click(e) {
