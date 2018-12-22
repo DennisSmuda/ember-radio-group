@@ -4,15 +4,17 @@ export default Route.extend({
   model() {
     return [
       {
-        title: "Red",
-        label: "blub",
+        label: "label 1",
         value: "value-1"
       },
       {
-        title: "Blue",
-        label: "blub",
-        value: "value-1"
+        label: "label 2",
+        value: "value-2"
+      },
+      {
+        label: "label 3",
+        value: "value-3"
       },
     ]
-  }
+  },
 });

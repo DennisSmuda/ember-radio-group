@@ -1,0 +1,42 @@
+[role="radiogroup"],
+[role="radoigroup"] *::after,
+[role="radiogroup"] *::before {
+  box-sizing: border-box;
+}
+
+[role="radiogroup"] {
+  border: 1px solid gray;
+  margin-left: 0.5rem;
+}
+
+[role="radio"] {
+  padding-left: 1.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+[role="radio"]::before {
+  content: '';
+  position: absolute;
+  left: 0rem;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid gray;
+  border-radius: 50%;
+}
+
+[role="radio"]::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  background-color: gray;
+  border-radius: 50%;
+}
+
+[role="radio"][aria-checked="true"]::after {
+  background-color: blue;
+}

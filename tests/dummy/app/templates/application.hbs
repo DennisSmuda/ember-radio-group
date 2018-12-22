@@ -2,9 +2,13 @@
   Ember Radio Group
 </h1>
 
-{{log "app temp" model}}
-
-{{radio-group
-  options=model
+{{#radio-group
+  groupOptions=model
+  groupValue="radiogroup-1"
+  checkedValue="value-2"
+  changed=(action "changedEvent")
 }}
+  Radio Group
+{{/radio-group}}
+
 {{outlet}}
