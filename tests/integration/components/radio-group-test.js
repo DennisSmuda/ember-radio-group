@@ -18,24 +18,16 @@ const sampleOptions = [
   },
 ];
 
+function sampleAction(value) {
+  return value;
+}
+
 module('Integration | Component | radio-group', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
     this.set('options', sampleOptions);
-    this.set('changedAction', function(value) {
-      return value;
-    });
-
-    // await render(hbs`{{radio-group
-    //   groupOptions=sampleOptions
-    //   groupValue="SampleValue"
-    //   checkedValue="value-2"
-    // }}`);
-
-    // assert.equal(this.element.textContent.trim(), '');
+    this.set('changedAction', sampleAction);
 
     // Template block usage:
     await render(hbs`
@@ -51,4 +43,42 @@ module('Integration | Component | radio-group', function(hooks) {
 
     assert.equal(this.element.classList, 'ember-view');
   });
+
+  test('it should have role="radiogroup" attribute', async function(assert) {
+    this.set('options', sampleOptions);
+    this.set('changedAction', sampleAction);
+
+    await render(hbs`
+      {{#radio-group
+        groupOptions=options
+        groupValue="SampleValue"
+        checkedValue="value-2"
+        changed=(action changedAction)
+      }}
+        template block text
+      {{/radio-group}}
+    `);
+
+    assert.ok(this.element.querySelector('[role="radiogroup"]'));
+  });
+
+  test('it should have tabindex="0" attribute', async function(assert) {
+    this.set('options', sampleOptions);
+    this.set('changedAction', sampleAction);
+
+    await render(hbs`
+      {{#radio-group
+        groupOptions=options
+        groupValue="SampleValue"
+        checkedValue="value-2"
+        changed=(action changedAction)
+      }}
+        template block text
+      {{/radio-group}}
+    `);
+
+    assert.ok(this.element.querySelector('[tabindex="0"]'));
+  });
+
+
 });
