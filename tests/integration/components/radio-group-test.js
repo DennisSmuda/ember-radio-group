@@ -7,6 +7,7 @@ const LEFT_KEY = 37;
 const UP_KEY = 38;
 const RIGHT_KEY = 39;
 const DOWN_KEY = 40;
+const Z_KEY = 91;
 
 const sampleOptions = [
   {
@@ -205,6 +206,29 @@ module('Integration | Component | radio-group', function(hooks) {
 
     await triggerKeyEvent('[aria-checked="true"]', 'keydown', DOWN_KEY);
     await triggerKeyEvent('[aria-checked="true"]', 'keydown', UP_KEY);
+    assert.equal(activeElement.getAttribute('aria-checked'), "true");
+  });
+
+  test('It should ignore other keydown/keyup events (z-key)', async function(assert) {
+    this.set('options', sampleOptions);
+    this.set('changedAction', sampleAction);
+
+    await render(hbs`
+      {{#radio-group
+        groupOptions=options
+        groupValue="SampleValue"
+        checkedValue="value-2"
+        changed=(action changedAction)
+      }}
+        template block text
+      {{/radio-group}}
+    `);
+
+    const activeElement = this.element.querySelector('[tabindex="0"]')
+
+    await triggerKeyEvent('[aria-checked="true"]', 'keydown', Z_KEY);
+    await triggerKeyEvent('[aria-checked="true"]', 'keyup', Z_KEY);
+
     assert.equal(activeElement.getAttribute('aria-checked'), "true");
   });
 
