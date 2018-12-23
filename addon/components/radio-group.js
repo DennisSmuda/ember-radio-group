@@ -38,7 +38,6 @@ export default Component.extend({
 
   keyUp(e) {
     if (e.keyCode === KEYCODES.UP || e.keyCode === KEYCODES.LEFT) {
-
       // Check previous option on Up|Left
       if (this.checkedValueIndex <= 0) {
         // Wrap to start
@@ -75,7 +74,7 @@ export default Component.extend({
     if (target.className === "radiogroup__label") return;
 
     this.set('checkedValue', target.getAttribute('data-value'));
-    this.set('checkedValueIndex', target.getAttribute('data-value-index'));
+    this.set('checkedValueIndex', parseInt(target.getAttribute('data-value-index')));
 
     this.changed(target.getAttribute('data-value'));
   },
