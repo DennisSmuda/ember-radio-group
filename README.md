@@ -9,15 +9,54 @@ Installation
 ------------------------------------------------------------------------------
 
 ```
-ember install radio-group
+ember install ember-radio-group
 ```
 
 
-Usage
-------------------------------------------------------------------------------
+## Usage
 
-[Longer description of how to use the addon in apps.]
+Inline:
 
+```hbs
+{{radio-group
+  groupOptions=model
+  groupValue="radiogroup-1"
+  labelText="Radio Group Inlinelabel"
+  checkedValue="value-2"
+  changed=(action "changedEvent")
+}}
+```
+
+Block:
+
+```hbs
+{{!-- Block will be rendered as the radio-group label --}}
+{{#radio-group
+  groupOptions=model
+  groupValue="radiogroup-2"
+  checkedValue="value-2"
+  changed=(action "changedEvent")
+}}
+  Radio Group Blocklabel
+{{/radio-group}}
+```
+
+For the group options, the radio-group component expects an array of objects containing a label/value pair. You can define these in plain Javascript inside your Route or Controller as:
+
+```js
+[
+  {
+    label: "label 1",
+    value: "value-1"
+  },
+  {
+    label: "label 2",
+    value: "value-2"
+  }
+]
+```
+
+Usually, you want your values to correspond to your model/changeset options so you can react to changes via the `changed`-event.
 
 License
 ------------------------------------------------------------------------------
