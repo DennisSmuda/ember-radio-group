@@ -1,12 +1,9 @@
 {
-  "name": "radio-group",
-  "version": "0.0.2",
+  "name": "ember-radio-group",
+  "version": "0.0.0",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
-    "ember-addon",
-    "radio",
-    "radio-buttons",
-    "radio-group"
+    "ember-addon"
   ],
   "repository": "",
   "license": "MIT",
@@ -21,9 +18,7 @@
     "lint:js": "eslint .",
     "start": "ember serve",
     "test": "ember test",
-    "test:all": "ember try:each",
-    "coverage": "COVERAGE=true ember t",
-    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
+    "test:all": "ember try:each"
   },
   "dependencies": {
     "ember-cli-babel": "^7.1.2",
@@ -32,9 +27,7 @@
   "devDependencies": {
     "@ember/optional-features": "^0.6.3",
     "broccoli-asset-rev": "^2.7.0",
-    "coveralls": "^3.0.2",
     "ember-cli": "~3.6.0",
-    "ember-cli-code-coverage": "^0.4.2",
     "ember-cli-dependency-checker": "^3.0.0",
     "ember-cli-eslint": "^4.2.3",
     "ember-cli-htmlbars-inline-precompile": "^1.0.3",
@@ -52,6 +45,7 @@
     "ember-source-channel-url": "^1.1.0",
     "ember-truth-helpers": "^2.1.0",
     "ember-try": "^1.0.0",
+    "ember-welcome-page": "^3.2.0",
     "eslint-plugin-ember": "^5.2.0",
     "eslint-plugin-node": "^7.0.1",
     "loader.js": "^4.7.0",
