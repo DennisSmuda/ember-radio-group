@@ -3,16 +3,18 @@
     {{yield}}
   </div>
 
-  {{#each groupOptions as |option index|}}
-    <div
-      class="radiogroup__radio"
-      role="radio"
-      tabindex={{if (eq option.value checkedValue) "0" "-1"}}
-      aria-checked={{if (eq option.value checkedValue) "true" "false"}}
-      data-value={{option.value}}
-      data-value-index={{index}}
-    >
-      {{option.label}}
-    </div>
-  {{/each}}
+  <div class="radiogroup__buttons">
+    {{#each groupOptions as |option index|}}
+      <div
+        class="radiogroup__radio"
+        role="radio"
+        tabindex={{if (eq option.value checkedValue) "0" "-1"}}
+        aria-checked={{if (eq option.value checkedValue) "true" "false"}}
+        data-value={{option.value}}
+        data-value-index={{index}}
+      >
+        {{option.label}}
+      </div>
+    {{/each}}
+  </div>
 </div>
