@@ -1,7 +1,13 @@
 # Ember-Radio-Group Addon
 
-[![Build Status](https://travis-ci.org/dennissmuda/ember-radio-group.svg?branch=master)](https://travis-ci.org/rajasegar/ember-aria-checkbox)
+[![Build Status](https://travis-ci.org/DennisSmuda/ember-radio-group.svg?branch=master)](https://travis-ci.org/DennisSmuda/ember-radio-group)
 [![Coverage Status](https://coveralls.io/repos/github/DennisSmuda/ember-radio-group/badge.svg?branch=master)](https://coveralls.io/github/DennisSmuda/ember-radio-group?branch=master)
+[![npm version](https://badge.fury.io/js/ember-radio-group.svg)](https://badge.fury.io/js/ember-radio-group)
+[![dependencies Status](https://david-dm.org/DennisSmuda/ember-radio-group/status.svg)](https://david-dm.org/DennisSmuda/ember-radio-group)
+[![EmberObserver](http://emberobserver.com/badges/ember-radio-group.svg?branch=master)](http://emberobserver.com/addons/ember-radio-group)
+
+
+
 
 An Ember Radiogroup addon widget based on the WAI-ARIA authoring practices.
 

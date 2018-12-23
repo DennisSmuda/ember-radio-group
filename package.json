@@ -1,7 +1,7 @@
 {
   "name": "ember-radio-group",
   "version": "0.1.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Accessible radio-group component",
   "keywords": [
     "ember-addon",
     "radio-group",
