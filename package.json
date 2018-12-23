@@ -3,7 +3,12 @@
   "version": "0.1.0",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "radio-group",
+    "radio",
+    "input",
+    "forms",
+    "aria"
   ],
   "repository": "",
   "license": "MIT",
