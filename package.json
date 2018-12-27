@@ -1,6 +1,6 @@
 {
   "name": "ember-radio-group",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Accessible radio-group component",
   "keywords": [
     "ember-addon",
