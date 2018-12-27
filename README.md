@@ -66,15 +66,17 @@ Usually, you want your values to correspond to your model/changeset options so y
 
 ### Resulting Markup
 
-The simplified version of the resultig markup is (additional HTML-attributes ommited for clarity):
+The simplified version of the resultig markup is:
 
 ```html
+<!-- additional HTML-attributes ommited for clarity -->
 <div class="radiogroup" ...>
   <div class="radiogroup__label" ...>...</div>
 
   <div class="radiogroup__buttons">
     <div class="radiogroup__radio" ...>...</div>
     <div class="radiogroup__radio" ...>...</div>
+    ...
   </div>
 </div>
 ```
@@ -87,10 +89,12 @@ now you can style your radio buttons as before/after elements of each `radiogrou
 |------------|-----------|------------------------|
 | options    | Object    | Option object that make up your different buttons |
 | checkedValue | string    | Value of the checked option |
-| groupValue | string    | Your ID for the radio group |
+| groupId | string    | Your ID for the radio group |
 
 ## Properties
 
+| name       | description            |
+|------------|------------------------------------|
 | changed | Fires whenever the option was changed |
 
 License
