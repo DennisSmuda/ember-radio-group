@@ -10,7 +10,10 @@
     "forms",
     "aria"
   ],
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DennisSmuda/ember-radio-group"
+  },
   "license": "MIT",
   "author": "",
   "directories": {

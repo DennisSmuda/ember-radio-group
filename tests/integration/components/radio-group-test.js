@@ -38,8 +38,8 @@ module('Integration | Component | radio-group', function(hooks) {
     // Template block usage:
     await render(hbs`
       {{#radio-group
-        groupOptions=options
-        groupValue="SampleValue"
+        options=options
+        groupId="SampleValue"
         checkedValue="value-2"
         changed=(action changedAction)
       }}
@@ -56,8 +56,8 @@ module('Integration | Component | radio-group', function(hooks) {
 
     await render(hbs`
       {{#radio-group
-        groupOptions=options
-        groupValue="SampleValue"
+        options=options
+        groupId="SampleValue"
         checkedValue="value-2"
         changed=(action changedAction)
       }}
@@ -74,8 +74,8 @@ module('Integration | Component | radio-group', function(hooks) {
 
     await render(hbs`
       {{#radio-group
-        groupOptions=options
-        groupValue="SampleValue"
+        options=options
+        groupId="SampleValue"
         checkedValue="value-2"
         changed=(action changedAction)
       }}
@@ -92,8 +92,8 @@ module('Integration | Component | radio-group', function(hooks) {
 
     await render(hbs`
       {{#radio-group
-        groupOptions=options
-        groupValue="SampleValue"
+        options=options
+        groupId="SampleValue"
         checkedValue="value-2"
         changed=(action changedAction)
       }}
@@ -113,8 +113,8 @@ module('Integration | Component | radio-group', function(hooks) {
 
     await render(hbs`
       {{#radio-group
-        groupOptions=options
-        groupValue="SampleValue"
+        options=options
+        groupId="SampleValue"
         checkedValue="value-2"
         changed=(action changedAction)
       }}
@@ -133,8 +133,8 @@ module('Integration | Component | radio-group', function(hooks) {
 
     await render(hbs`
       {{#radio-group
-        groupOptions=options
-        groupValue="SampleValue"
+        options=options
+        groupId="SampleValue"
         checkedValue="value-2"
         changed=(action changedAction)
       }}
@@ -163,8 +163,8 @@ module('Integration | Component | radio-group', function(hooks) {
 
     await render(hbs`
       {{#radio-group
-        groupOptions=options
-        groupValue="SampleValue"
+        options=options
+        groupId="SampleValue"
         checkedValue="value-2"
         changed=(action changedAction)
       }}
@@ -193,8 +193,8 @@ module('Integration | Component | radio-group', function(hooks) {
 
     await render(hbs`
       {{#radio-group
-        groupOptions=options
-        groupValue="SampleValue"
+        options=options
+        groupId="SampleValue"
         checkedValue="value-2"
         changed=(action changedAction)
       }}
@@ -215,8 +215,8 @@ module('Integration | Component | radio-group', function(hooks) {
 
     await render(hbs`
       {{#radio-group
-        groupOptions=options
-        groupValue="SampleValue"
+        options=options
+        groupId="SampleValue"
         checkedValue="value-2"
         changed=(action changedAction)
       }}

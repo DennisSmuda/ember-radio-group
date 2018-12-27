@@ -15,7 +15,7 @@ const KEYCODES = {
 export default Component.extend({
   layout,
 
-  groupOptions: null,
+  options: null,
   checkedValue: null,
   checkedValueIndex: null,
   activeRadioElement: null,
@@ -23,7 +23,7 @@ export default Component.extend({
   init() {
     this._super(...arguments);
 
-    this.groupOptions.forEach((option, index) => {
+    this.options.forEach((option, index) => {
       if (option.value === this.checkedValue) {
         this.set('checkedValueIndex', index);
       }
@@ -41,21 +41,21 @@ export default Component.extend({
       // Check previous option on Up|Left
       if (this.checkedValueIndex <= 0) {
         // Wrap to start
-        this.set('checkedValue', this.groupOptions[this.groupOptions.length - 1].value);
-        this.set('checkedValueIndex', this.groupOptions.length - 1);
+        this.set('checkedValue', this.options[this.options.length - 1].value);
+        this.set('checkedValueIndex', this.options.length - 1);
       } else {
-        this.set('checkedValue', this.groupOptions[this.checkedValueIndex - 1].value);
+        this.set('checkedValue', this.options[this.checkedValueIndex - 1].value);
         this.set('checkedValueIndex', this.checkedValueIndex - 1);
       }
 
     } else if (e.keyCode === KEYCODES.DOWN || e.keyCode === KEYCODES.RIGHT) {
       // Check next option on Down|Right
-      if (this.checkedValueIndex >= this.groupOptions.length - 1) {
+      if (this.checkedValueIndex >= this.options.length - 1) {
         // Wrap to start
-        this.set('checkedValue', this.groupOptions[0].value);
+        this.set('checkedValue', this.options[0].value);
         this.set('checkedValueIndex', 0);
       } else {
-        this.set('checkedValue', this.groupOptions[this.checkedValueIndex + 1].value);
+        this.set('checkedValue', this.options[this.checkedValueIndex + 1].value);
         this.set('checkedValueIndex', this.checkedValueIndex + 1);
       }
 
@@ -64,7 +64,7 @@ export default Component.extend({
     // Focus new Element
     const newElement = document.querySelector('[role="radio"][data-value-index="' + this.checkedValueIndex + '"]');
     newElement.focus();
-    this.changed(this.groupOptions[this.checkedValueIndex].value);
+    this.changed(this.options[this.checkedValueIndex].value);
     e.preventDefault();
   },
 

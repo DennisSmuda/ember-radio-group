@@ -25,8 +25,8 @@ Inline:
 
 ```hbs
 {{radio-group
-  groupOptions=model
-  groupValue="radiogroup-1"
+  options=model
+  groupId="radiogroup-1"
   labelText="Radio Group Inlinelabel"
   checkedValue="value-2"
   changed=(action "changedEvent")
@@ -38,8 +38,8 @@ Block:
 ```hbs
 {{!-- Block will be rendered as the radio-group label --}}
 {{#radio-group
-  groupOptions=model
-  groupValue="radiogroup-2"
+  options=model
+  groupId="radiogroup-2"
   checkedValue="value-2"
   changed=(action "changedEvent")
 }}
@@ -63,6 +63,35 @@ For the group options, the radio-group component expects an array of objects con
 ```
 
 Usually, you want your values to correspond to your model/changeset options so you can react to changes via the `changed`-event.
+
+### Resulting Markup
+
+The simplified version of the resultig markup is (additional HTML-attributes ommited for clarity):
+
+```html
+<div class="radiogroup" ...>
+  <div class="radiogroup__label" ...>...</div>
+
+  <div class="radiogroup__buttons">
+    <div class="radiogroup__radio" ...>...</div>
+    <div class="radiogroup__radio" ...>...</div>
+  </div>
+</div>
+```
+
+now you can style your radio buttons as before/after elements of each `radiogroup_radio` and don't have to worry about overwriting some browser-native input element.
+
+## Properties
+
+| name       | type      | description            |
+|------------|-----------|------------------------|
+| options    | Object    | Option object that make up your different buttons |
+| checkedValue | string    | Value of the checked option |
+| groupValue | string    | Your ID for the radio group |
+
+## Properties
+
+| changed | Fires whenever the option was changed |
 
 License
 ------------------------------------------------------------------------------

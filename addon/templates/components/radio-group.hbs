@@ -1,10 +1,10 @@
 <div
   role="radiogroup"
   class="radiogroup"
-  aria-labelledby="{{groupValue}}-label"
-  id={{groupValue}}
+  aria-labelledby="{{groupId}}-label"
+  id={{groupId}}
 >
-  <div class="radiogroup__label" id="{{groupValue}}-label">
+  <div class="radiogroup__label" id="{{groupId}}-label">
     {{#if hasBlock}}
       {{yield}}
     {{else if labelText}}
@@ -13,7 +13,7 @@
   </div>
 
   <div class="radiogroup__buttons">
-    {{#each groupOptions as |option index|}}
+    {{#each options as |option index|}}
       <div
         class="radiogroup__radio"
         role="radio"
